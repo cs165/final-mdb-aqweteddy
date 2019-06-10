@@ -16,7 +16,6 @@ async function main() {
 
   // The "process.env.MONGODB_URI" is needed to work with Heroku.
   db = await MongoClient.connect(process.env.MONGODB_URI || MONGO_URL);
-
   // The "process.env.PORT" is needed to work with Heroku.
   const port = process.env.PORT || 3000;
   await app.listen(port);
@@ -28,3 +27,11 @@ main();
 ////////////////////////////////////////////////////////////////////////////////
 
 // TODO(you): Add at least 1 GET route and 1 POST route.
+
+app.get('/getev', async function(req, res) {
+  res.json({ response: 'get' })
+})
+
+app.post('/postev', async function (req, res) {
+  res.json({ response: 'post' })
+})
