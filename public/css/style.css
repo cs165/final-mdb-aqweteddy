@@ -1,3 +1,82 @@
 /**
  * TODO(you): Add the CSS necessary to complete your final project.
  **/
+
+.inactive {
+    display: none !important;
+}
+
+.title {
+  color: rosybrown;
+  font-weight: 800;
+  border-style: dashed;
+  padding: 5vh;
+  margin: 3vh;
+}
+
+.image-frame {
+   display: flex;
+   border-style: double;
+   border-radius: 5%;
+   flex-direction: column;
+   justify-content:space-between;
+   align-content: center;
+   height: 45vh;
+   padding: 2vh;
+   margin: 1vh;
+  }
+
+.image-frame > button {
+
+}
+.image-frame > p {
+  line-height: 3vh;
+}
+
+.slidein {
+  -moz-animation-duration: 1.5s;
+  -webkit-animation-duration: 1.5s;
+  animation-duration: 1.5s;
+  -moz-animation-name: slidein;
+  -webkit-animation-name: slidein;
+  animation-name: slidein;
+  -moz-animation-direction: alternate;
+  -webkit-animation-direction: alternate;
+  animation-direction: alternate;
+}
+    
+@-moz-keyframes slidein {
+  from {
+    margin-top:100%;
+    width:300%
+  }
+      
+  to {
+    margin-top:0%;
+    width:100%;
+  }
+}
+
+@-webkit-keyframes slidein {
+  from {
+    margin-top:100%;
+    width:300%
+  }
+  
+  to {
+   margin-top:0%;
+   width:100%;
+ }
+}
+
+@keyframes slidein {
+  from {
+    margin-top:100%;
+    width:300%
+  }
+  
+  to {
+   margin-top:0%;
+   width:100%;
+ }
+}
